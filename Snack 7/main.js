@@ -1,14 +1,25 @@
-const eseguiEferma = (message, start, stop) => {
+// const eseguiEferma = (message, start, stop) => {
 
-    const startTimeoutId = setTimeout(() => {
-        intervalId = setInterval(() => {
-            console.log(message)
-        }, 1000)
-    }, start)
+//     const startTimeoutId = setTimeout(() => {
+//         intervalId = setInterval(() => {
+//             console.log(message)
+//         }, 1000)
+//     }, start)
 
-    setTimeout(() => {
+//     setTimeout(() => {
+//         clearInterval(intervalId)
+//     }, stop)
+// }
+
+const eseguiEferma = (message, interval, stop) => {
+    
+    const intervalId = setInterval(()=> {
+        console.log(message)
+    }, interval)
+
+    setTimeout(()=>{
         clearInterval(intervalId)
     }, stop)
 }
 
-eseguiEferma('ciao', 1000, 10000)
+eseguiEferma('Sto eseguendo...', 1000, 10000)

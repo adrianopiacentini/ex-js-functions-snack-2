@@ -1,13 +1,11 @@
 const creaContatoreAutomatico = (ms) => {
     let counter = 0
 
-    const print = () => {
-        counter++
-        console.log(counter)
-    }
-
     return function timer() {
-        setInterval(print, ms)
+        setInterval(() => { 
+            counter++
+            console.log(counter)
+        }, ms)
     }
 }
 
